@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>Página de usuario</title>
+</head>
+
+<body>
+  <div class="layout">
+    <header>
+
+      <div class="logo">
+        <img class="img-logo" src="../img/logo.jpg" alt="Logo Dental Center">
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="./home.html">Inicio</a></li>
+          <li><a href="./form-registro.html">Registro Usuarios</a></li>
+          <li><a href="tratamientos.html">Tratamientos</a></li>
+          <li><button class="btn-principal" id="btnCerrarSesion">Cerrar sesión</button></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main class="main-user">
+
+      <section class="intro-user-container">
+        <div class="intro-user-content">
+          <div class="intro-user-content-title">
+            <h1>Hola, <span id="user"></span></h1>
+            <h2>Gestión de tus citas dentales</h2>
+            <button id="btn-nueva-cita" class="btn-principal">Agendar nueva cita</button>
+          </div>
+          <img class="intro-user-img-doc" src="../img/doc-uno.png" alt="">
+        </div>
+      </section>
+
+      <section class="citas-container">
+        <div class="citas-container-content">
+
+          <h2>Tus citas <div> </div>
+          </h2>
+
+          <div class="citas-table-container">
+            <table class="citas-table">
+
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Hora</th>
+                  <th>Tratamiento</th>
+                  <th>Doctor</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+
+              <tbody id="citas-body">
+              </tbody>
+
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+
+
+
+  <!-- Modal para agendar cita -->
+  <div id="modal-nueva-cita" class="modal-cita">
+
+    <div class="modal-cita-contenido">
+
+      <div class="modal-cita-header">
+        <h2>Agendar nueva cita</h2>
+
+        <button type="button" id="btn-cerrar-modal" class="btn-cerrar-modal" aria-label="Cerrar">
+          &times;
+        </button>
+      </div>
+
+      <form id="form-nueva-cita">
+
+        <div class="campo-formulario">
+          <label for="tratamiento">Tratamiento</label>
+          <select id="tratamiento" name="tratamiento_id" required>
+            <option value="">Selecciona un tratamiento</option>
+          </select>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="doctor">Doctor</label>
+          <select id="doctor" name="doctor_id" required>
+            <option value="">Selecciona un doctor</option>
+          </select>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="hora" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="observaciones">Observaciones</label>
+          <textarea id="observaciones" name="observaciones" rows="3" placeholder="Observaciones opcionales"></textarea>
+        </div>
+
+        <div class="modal-cita-acciones">
+          <button type="button" id="btn-cancelar-modal" class="btn-secundario">
+            Cancelar
+          </button>
+
+          <button type="submit" class="btn-principal">
+            Agendar cita
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="../js/controllers/userPage.controller.js"></script>
+</body>
+
+</html>

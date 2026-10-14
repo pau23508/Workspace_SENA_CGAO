@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="layout">
+
+    <header>
+
+      <div class="logo">
+        <img class="img-logo" src="../img/logo.jpg" alt="Logo Dental Center">
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li class="enlace-activo">Inicio</li>
+          <li><a href="./form-registro.html">Registro Usuarios</a></li>
+          <li><a href="./tratamientos.html">Tratamientos</a></li>
+          <li><button id="agendaCitaHome" class="btn-principal">Agendar cita</button></li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+    <main class="main">
+
+      <div class="loginForm-container">
+        <div class="loginForm">
+          <h2>Iniciar sesión</h2>
+          <form id="loginForm">
+            <div class="loginForm-inputs">
+              <input type="email" id="email" required placeholder="Correo">
+              <input type="password" id="password" required placeholder="Contraseña">
+              <div class="recuerdame"><input type="checkbox" name="" id=""> Recuérdame</div>
+              <button class="btn-principal" type="submit">Iniciar sesión</button>
+              <p>¿Olvidaste tu contraseña?</p>
+              <p>¿Eres nuevo? <span class="btn-enlace" id="btnIrRegistro">Regístrate aquí</span></p>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <div class="contenidoSecundario">
+
+      <div class="odontologia-presentacion">
+
+        <div class="odontologia-texto">
+          <span class="odontologia-etiqueta">DENTAL CENTER</span>
+
+          <h1>
+            Cuidamos tu sonrisa,
+            <span>cuidamos de ti.</span>
+          </h1>
+
+          <p>
+            Ofrecemos atención odontológica profesional con tratamientos
+            pensados para cuidar tu salud dental y mejorar tu sonrisa.
+          </p>
+
+          <div class="odontologia-datos">
+            <div>
+              <strong>10+</strong>
+              <span>Años de experiencia</span>
+            </div>
+
+            <div>
+              <strong>500+</strong>
+              <span>Pacientes atendidos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="odontologia-imagen">
+          <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80"
+            alt="Dentista atendiendo a un paciente">
+        </div>
+
+      </div>
+
+
+      <div class="servicios-dentales">
+
+        <h2>Conoce nuestros servicios</h2>
+
+        <p class="servicios-descripcion">
+          Tratamientos diseñados para mantener una sonrisa saludable.
+        </p>
+
+        <div class="servicios-grid">
+
+          <article class="servicio-card">
+            <div class="servicio-icono">🦷</div>
+            <h3>Odontología general</h3>
+            <p>
+              Atención preventiva y tratamientos para cuidar
+              la salud de tus dientes.
+            </p>
+          </article>
+
+          <article class="servicio-card">
+            <div class="servicio-icono">✨</div>
+            <h3>Ortodoncia</h3>
+            <p>
+              Tratamientos para mejorar la posición de los dientes
+              y conseguir una sonrisa armoniosa.
+            </p>
+          </article>
+
+          <article class="servicio-card">
+            <div class="servicio-icono">😁</div>
+            <h3>Estética dental</h3>
+            <p>
+              Procedimientos enfocados en mejorar la apariencia
+              y confianza de tu sonrisa.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <footer class="footer">
+
+      <div class="footer-contenido">
+
+        <div class="footer-marca">
+          <img src="../img/logo.jpg" alt="Logo Dental Center">
+
+          <p>
+            Cuidamos tu sonrisa con atención profesional
+            y tratamientos pensados para ti.
+          </p>
+        </div>
+
+
+        <div class="footer-seccion">
+          <h3>Dental Center</h3>
+
+          <a href="./home.html">Inicio</a>
+          <a href="./form-registro.html">Registro</a>
+          <a href="./tratamientos.html">Tratamientos</a>
+        </div>
+
+
+        <div class="footer-seccion">
+          <h3>Contacto</h3>
+
+          <p>📍 Bogotá, Colombia</p>
+          <p>📞 +57 300 000 0000</p>
+          <p>✉️ contacto@dentalcenter.com</p>
+        </div>
+
+
+        <div class="footer-seccion">
+          <h3>Horarios</h3>
+
+          <p>Lunes - Viernes</p>
+          <p>8:00 AM - 6:00 PM</p>
+
+          <p>Sábados</p>
+          <p>8:00 AM - 1:00 PM</p>
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Dental Center. Todos los derechos reservados.
+        </p>
+
+        <div class="footer-redes">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script>
+    const btnClicAgendar = document.getElementById("agendaCitaHome");
+
+    btnClicAgendar.addEventListener("click", () => {
+
+      const usuarioActivo = localStorage.getItem("userActivo");
+
+      if (usuarioActivo) {
+        window.location.href = "./user-page.html";
+      } else {
+        alert("Inicia sesión o regístrate para agendar una cita.");
+      }
+
+    });
+  </script>
+
+  <script type="module" src="../js/controllers/login.controller.js"></script>
+</body>
+
+</html>

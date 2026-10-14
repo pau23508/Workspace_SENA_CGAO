@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <title>Registro</title>
+</head>
+
+<body>
+  <div class="layout">
+    <header>
+
+      <div class="logo">
+        <img class="img-logo" src="../img/logo.jpg" alt="Logo Dental Center">
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="./home.html">Inicio</a></li>
+          <li class="enlace-activo">Registro Usuarios</li>
+          <li><a href="tratamientos.html">Tratamientos</a></li>
+          <li><button id="btnAgendarCitaRegistro" class="btn-principal">Agendar cita</button></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <section class="intro-formRegistro-container">
+      <div class="intro-formRegistro-content">
+        <div class="intro-formRegistro-title">
+          <h1>Registro de usuario</h1>
+          <h2>Crea tu nueva cuenta</h2>
+        </div>
+        <img class="intro-user-img-doc" src="../img/doc-dos.png" alt="">
+      </div>
+    </section>
+
+    <div class="formRegistro-container">
+      <div class="formRegistro-content">
+        <h2>Registro de usuario</h2>
+        <form id="formRegistro">
+
+          <div class="formRegistro-inputs">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="email" id="formEmail" placeholder="Correo" required>
+            <input type="text" id="documento" placeholder="Documento" required>
+            <input type="password" id="formPassword" placeholder="Contraseña" required>
+          </div>
+
+          <div class="formRegistro-btns">
+            <button class="btn-principal" type="submit">Registrarse</button>
+            <p>¿Ya tienes una cuenta? <a href="./home.html" class="btn-enlace">Iniciar sesión</a></p>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const btnAgendarCita = document.getElementById('btnAgendarCitaRegistro');
+
+    btnAgendarCita?.addEventListener('click', () => {
+
+      const usuarioActivo = localStorage.getItem('userActivo');
+
+      if (usuarioActivo) {
+        // Usuario ya inició sesión
+        window.location.href = './user-page.html';
+      } else {
+        // No ha iniciado sesión
+        window.location.href = './home.html';
+      }
+
+    });
+  </script>
+
+  <script type="module" src="../js/controllers/registro.controller.js"></script>
+</body>
+
+</html>

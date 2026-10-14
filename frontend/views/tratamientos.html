@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Tratamientos | Dental Center</title>
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- ENCABEZADO -->
+    <header>
+
+      <div class="logo">
+        <img class="img-logo" src="../img/logo.jpg" alt="Logo Dental Center">
+      </div>
+
+      <nav class="nav">
+        <ul>
+
+          <li>
+            <a href="./home.html">Inicio</a>
+          </li>
+
+          <li>
+            <a href="./form-registro.html">Registro Usuarios</a>
+          </li>
+
+          <li class="enlace-activo">
+            Tratamientos
+          </li>
+
+          <li><button id="btnAgendarCita" class="btn-principal">Agendar cita</button></li>
+
+        </ul>
+      </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="tratamientos-main">
+
+      <section class="tratamientos-intro">
+
+        <di class="container-intro">
+          <h1>Nuestros tratamientos</h1>
+
+          <p>
+            En Dental Center contamos con diferentes tratamientos
+            para cuidar tu salud oral y mejorar la apariencia de tu sonrisa.
+          </p>
+        </di>
+
+      </section>
+
+
+      <!-- TARJETAS DE TRATAMIENTOS -->
+      <section class="tratamientos-container">
+
+        <article class="tratamiento-card">
+
+          <img src="../img/t1.jpg" alt="Tratamiento odontológico" class="tratamiento-img">
+
+          <div class="tratamiento-content">
+
+            <h2>Odontología general</h2>
+
+            <p>
+              Cuidamos tu salud oral mediante procedimientos
+              orientados a la prevención y mantenimiento de tus dientes.
+            </p>
+
+            <button class="btn-secundario">
+              Ver tratamiento
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="tratamiento-card">
+
+          <img src="../img/t2.jpg" alt="Tratamiento de odontología estética" class="tratamiento-img">
+
+          <div class="tratamiento-content">
+
+            <h2>Odontología estética</h2>
+
+            <p>
+              Tratamientos enfocados en mejorar la apariencia de tu
+              sonrisa y conservar una adecuada salud dental.
+            </p>
+
+            <button class="btn-secundario">
+              Ver tratamiento
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="tratamiento-card">
+
+          <img src="../img/t3.jpg" alt="Tratamiento de ortodoncia" class="tratamiento-img">
+
+          <div class="tratamiento-content">
+
+            <h2>Ortodoncia</h2>
+
+            <p>
+              Corregimos la posición de los dientes para conseguir
+              una sonrisa más armónica y una mejor función dental.
+            </p>
+
+            <button class="btn-secundario">
+              Ver tratamiento
+            </button>
+
+          </div>
+
+        </article>
+
+
+        <article class="tratamiento-card">
+
+          <img src="../img/t4.jpg" alt="Resultado de tratamiento dental" class="tratamiento-img">
+
+          <div class="tratamiento-content">
+
+            <h2>Diseño de sonrisa</h2>
+
+            <p>
+              Realizamos tratamientos estéticos buscando una sonrisa
+              natural y armoniosa de acuerdo con las características
+              de cada paciente.
+            </p>
+
+            <button class="btn-secundario">
+              Ver tratamiento
+            </button>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </main>
+
+
+    <footer></footer>
+
+  </div>
+  <script>
+    const btnAgendarCita = document.getElementById('btnAgendarCita');
+
+    btnAgendarCita?.addEventListener('click', () => {
+
+      const usuarioActivo = localStorage.getItem('userActivo');
+
+      if (usuarioActivo) {
+        // Usuario ya inició sesión
+        window.location.href = './user-page.html';
+      } else {
+        // No ha iniciado sesión
+        window.location.href = './home.html';
+      }
+
+    });
+  </script>
+</body>
+
+</html>
